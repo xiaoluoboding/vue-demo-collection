@@ -29,19 +29,17 @@
 <template>
   <div id="container" class="container">
     <div class="row">
-      <h4>Github文件浏览器</h4>
-      <div class="row">
-      <form id="changeRepoForm" @submit.prevent="changeRepo()" class="col s12">
-        <div class="row">
-          <div class="col s6">
-            <label for="fullRepoName">Full Repo Name</label>
-            <input type="text" placeholder="xiaoluoboding/ghost-theme-kaldorei" id="fullRepoName" v-model="fullRepoName" class="form-control">
-          </div>
-          <div class="col s6">
-            <button type="submit" class="btn btn-primary">获&emsp;取</button>
-          </div>
+      <legend><h2><span class="mega-octicon octicon-mark-github"></span> Github文件浏览器</h2></legend>
+      <form id="changeRepoForm" @submit.prevent="changeRepo()" class="form-inline">
+        <div class="form-group">
+          <label for="fullRepoName">Full Repo Name：</label>
+          <input type="text" id="fullRepoName" class="form-control" placeholder="xiaoluoboding/ghost-theme-kaldorei"
+          v-model="fullRepoName"
+          style="width: 300px;">
         </div>
+        <button type="submit" class="btn btn-primary">获&emsp;取</button>
       </form>
+      <hr>
       <file-explorer :username="username" :repo="repo"></file-explorer>
     </div>
   </div>

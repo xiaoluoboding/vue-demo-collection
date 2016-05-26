@@ -69,15 +69,15 @@
   };
 </script>
 <template>
+  <!-- {{ $data | json }} -->
   <div class="row">
-    <div class="col s12">
-      <table class="table">
-        <caption>{{ path }}</caption>
+    <div class="col-md-12 col-sm-12">
+      <table class="table table-hover">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>当前路径：{{ path }}</th>
             <th class="text-right">
-              <button class="btn btn-inverse btn-xs" @click="goBack()" v-if="path !== '/'">返&emsp;回</button>
+              <button class="btn btn-danger btn-xs" @click="goBack()" v-if="path !== '/'">返&emsp;回</button>
             </th>
           </tr>
         </thead>
@@ -85,17 +85,17 @@
           <tr v-for="file in sortedFiles">
             <td>
               <div class="file" v-if="file.type === 'file'">
-                <i class="material-icons">insert_drive_file</i>
+                <span class="octicon octicon-file-text"></span>
                 <a href="#"> {{ file.name }}</a>
               </div>
               <div class="directory" v-if="file.type === 'dir'">
-                <i class="material-icons">folder</i>
-                <a @click="changePath(file.path)"> {{ file.name }}</a>
+                <span class="octicon octicon-file-directory"></span>
+                <a href="#" @click="changePath(file.path)"> {{ file.name }}</a>
               </div>
             </td>
             <td class="text-right">
-              <a href="{{ file.download_url }}" download v-if="file.type === 'file'">
-                <i class="material-icons">file_download</i>
+              <a href="{{ file.download_url }}" download="file" v-if="file.type === 'file'">
+                <span class="octicon octicon-cloud-download"></span>
               </a>
             </td>
           </tr>
