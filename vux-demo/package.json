@@ -3,7 +3,7 @@
   "description": "A Vue.js project",
   "author": "xiaoluoboding <xiaoluoboding@gmail.com>",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server --inline --hot --port 8090",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {

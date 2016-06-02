@@ -5,7 +5,7 @@
   import XInput from 'vux/dist/components/x-input'
   import Box from 'vux/dist/components/box'
   export default {
-    name: 'Login',
+    name: 'Signin',
     components: {
       Group,
       XButton,
@@ -16,7 +16,7 @@
   }
 </script>
 <template>
-  <x-header>用户登录</x-header>
+  <x-header>用户登录<a slot="right">首页</a></x-header>
   <group>
     <x-input title="用户名：" placeholder="请输入用户名" type="text"></x-input>
     <x-input title="密&emsp;码：" placeholder="请输入密码" :min="6" :max="16" type="password"></x-input>

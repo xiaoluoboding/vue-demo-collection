@@ -21,4 +21,4 @@ router.redirect({
 })
 
 // Start up our app
-router.start(App, 'body')
+router.start(App, '#root')

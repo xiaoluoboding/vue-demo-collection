@@ -2,10 +2,10 @@
 export default function(router) {
   router.map({
     '/': {
-      component: require("./components/Login.vue")
+      component: require("./components/Index.vue")
     },
-    '/login': {
-      component: require("./components/Login.vue")
+    '/signin': {
+      component: require("./components/Signin.vue")
     },
     '/signup': {
       component: require("./components/Signup.vue")
