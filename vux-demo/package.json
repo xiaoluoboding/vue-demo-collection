@@ -10,6 +10,7 @@
     "babel-runtime": "^6.0.0",
     "vue": "^1.0.0",
     "vue-router": "^0.7.13",
+    "vuex": "^0.6.3",
     "vux": "0.1.0-rc1"
   },
   "devDependencies": {
