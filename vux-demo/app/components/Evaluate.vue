@@ -19,7 +19,7 @@
   <x-header>学科分析</x-header>
   <group>
     <x-input title="学校" placeholder="请输入学校" type="text"></x-input>
-    <x-input title="专业"></x-input>
+    <x-input title="专业" placeholder="请输入专业"></x-input>
     <x-input title="总分" placeholder="请输入总分" type="text"></x-input>
   </group>
   <box gap="10px 10px">

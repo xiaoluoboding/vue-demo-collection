@@ -10,6 +10,15 @@ export default function(router) {
     '/signup': {
       component: require("./components/Signup.vue")
     },
+    '/home': {
+      component: require("./components/Home.vue")
+    },
+    '/user': {
+      component: require("./components/User.vue")
+    },
+    '/improve': {
+      component: require("./components/Improve.vue")
+    },
     '/evaluate': {
       component: require("./components/Evaluate.vue")
     }

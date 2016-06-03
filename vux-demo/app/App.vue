@@ -1,15 +1,10 @@
 <script>
-  import Group from 'vux/dist/components/group'
-  import Cell from 'vux/dist/components/cell'
-  import XButton from 'vux/dist/components/x-button'
-  import XHeader from 'vux/dist/components/x-header'
-  import XInput from 'vux/dist/components/x-input'
-  import Selector from 'vux/dist/components/selector'
-  import Box from 'vux/dist/components/box'
-  import Divider from 'vux/dist/components/divider'
+  import store from './vuex/store'
 
   export default {
     name: 'App',
+
+    store,
 
     data() {
       return {
@@ -18,17 +13,6 @@
         // preserves its current state and we are modifying
         // its initial state.
       }
-    },
-
-    components: {
-      Group,
-      Cell,
-      XButton,
-      XHeader,
-      XInput,
-      Selector,
-      Box,
-      Divider
     }
   }
 </script>
