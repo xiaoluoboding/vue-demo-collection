@@ -29,7 +29,7 @@
 <template>
   <div id="container" class="container">
     <div class="row">
-      <legend><h2><span class="mega-octicon octicon-mark-github"></span> Github文件浏览器</h2></legend>
+      <legend><h2><span class="mega-octicon octicon-mark-github"></span> GitHub文件浏览器</h2></legend>
       <form id="changeRepoForm" @submit.prevent="changeRepo()" class="form-inline">
         <div class="form-group">
           <label for="fullRepoName">Full Repo Name：</label>
