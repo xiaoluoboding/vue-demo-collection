@@ -2,7 +2,7 @@
   import FileExplorer from './FileExplorer.vue'
 
   export default {
-    name: 'Fullreponame',
+    name: 'Github',
     data: function() {
       return {
         fullRepoName: '',
