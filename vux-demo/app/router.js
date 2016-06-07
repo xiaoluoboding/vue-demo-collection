@@ -18,9 +18,6 @@ export default function(router) {
     },
     '/improve': {
       component: require("./components/Improve.vue")
-    },
-    '/evaluate': {
-      component: require("./components/Evaluate.vue")
     }
   })
 }

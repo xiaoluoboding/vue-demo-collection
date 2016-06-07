@@ -47,7 +47,7 @@
     </tabbar-item>
     <tabbar-item v-link="{ path: '/home', replace: true }">
       <img slot="icon" :src="iconList.evaluate">
-      <span slot="label">测评</span>
+      <span slot="label">文章</span>
     </tabbar-item>
     <tabbar-item selected v-link="{ path: '/user', replace: true }">
       <img slot="icon" :src="iconList.user">

@@ -13,8 +13,6 @@
       return {
         username: '',
         password: '',
-        examnum: '',
-        realname: '',
         showToast: false
       }
     },
@@ -23,8 +21,6 @@
       submit() {
         localStorage.setItem('username', this.username)
         localStorage.setItem('password', this.password)
-        localStorage.setItem('examnum', this.examnum)
-        localStorage.setItem('realname', this.realname)
         setTimeout(() => {
           this.showToast = true
           this.goHome()
@@ -50,12 +46,10 @@
   <group>
     <x-input title="用户名：" placeholder="请输入用户名" type="text" :value.sync="username" v-ref:username></x-input>
     <x-input title="密&emsp;码：" placeholder="6-16个字符" :min="6" :max="16" type="password" :value.sync="password" v-ref:password></x-input>
-    <x-input title="考&emsp;号：" placeholder="请输入考号" type="text" :value.sync="examnum" v-ref:examnum></x-input>
-    <x-input title="姓&emsp;名：" placeholder="请输入真实姓名" is-type="china-name" :value.sync="realname" v-ref:realname></x-input>
   </group>
   <box gap="10px 10px">
     <x-button type="primary" @click="submit()"
-    v-if="$refs.username.valid && $refs.password.valid && $refs.examnum.valid && $refs.realname.valid">提交注册</x-button>
+    v-if="$refs.username.valid && $refs.password.valid">提交注册</x-button>
     <x-button disabled v-else>提交注册</x-button>
   </box>
   <divider><a href="#!" v-link="{ path: '/signin' }">已有账号？</a></divider>

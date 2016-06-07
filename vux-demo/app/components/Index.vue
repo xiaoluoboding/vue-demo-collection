@@ -19,8 +19,7 @@
 <template>
   <div class="index">
     <section class="index-name">
-      <h1>吉林省</h1>
-      <h2>高考志愿诊断系统</h2>
+      <h1>登录页</h1>
     </section>
     <section class="index-form">
       <box gap="10px 10px">

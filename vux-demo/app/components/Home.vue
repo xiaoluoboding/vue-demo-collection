@@ -45,11 +45,11 @@
         </div>
       </masker>
     </div>
-    <div style="margin: 10px;overflow: hidden;" v-link="{ path: '/evaluate' }">
+    <div style="margin: 10px;overflow: hidden;">
       <masker style="border-radius: 2px;" color="3498db" :opacity="0.8">
         <div class="m-img"></div>
         <div slot="content" class="m-title">
-          我要测评
+          我要撰写
         </div>
       </masker>
     </div>
@@ -57,7 +57,7 @@
       <masker style="border-radius: 2px;" color="2ecc71" :opacity="0.8">
         <div class="m-img"></div>
         <div slot="content" class="m-title">
-          历史测评
+          我要分享
         </div>
       </masker>
     </div>
@@ -78,7 +78,7 @@
       </tabbar-item>
       <tabbar-item selected v-link="{ path: '/home', replace: true }">
         <img slot="icon" :src="iconList.evaluate">
-        <span slot="label">测评</span>
+        <span slot="label">文章</span>
       </tabbar-item>
       <tabbar-item v-link="{ path: '/user', replace: true }">
         <img slot="icon" :src="iconList.user">
