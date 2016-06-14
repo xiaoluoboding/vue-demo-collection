@@ -1,0 +1,36 @@
+{
+  "name": "vue-demo-collection",
+  "description": "A collection of Vue.js demos",
+  "author": "xiaoluoboding <xiaoluoboding@gmail.com>",
+  "scripts": {
+    "github-file-explorer": "webpack-dev-server --config github-file-explorer/webpack.config.js --content-base github-file-explorer --inline --hot --port 8090",
+    "vux-demo": "webpack-dev-server --config vux-demo/webpack.config.js --content-base vux-demo --inline --hot --port 8090",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.0.0",
+    "vue": "^1.0.0",
+    "vue-resource": "^0.7.4",
+    "vue-router": "^0.7.13",
+    "vuex": "^0.6.3",
+    "vux": "0.1.0-rc1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "cross-env": "^1.0.6",
+    "css-loader": "^0.23.0",
+    "file-loader": "^0.8.4",
+    "json-loader": "^0.5.4",
+    "url-loader": "^0.5.7",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^8.2.1",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  }
+}
