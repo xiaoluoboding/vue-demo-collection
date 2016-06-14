@@ -1,10 +1,6 @@
 <script>
-  import store from './vuex/store'
-
   export default {
     name: 'App',
-
-    store,
 
     data() {
       return {
