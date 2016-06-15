@@ -1,4 +1,4 @@
-# vue-demo-collection
+# Vue.js Demo Collection
 A collection of Vue.js demos
 
 # Usage
@@ -16,7 +16,9 @@ npm install
 
 ## github-file-explorer
 
-学习vue.js的入门demo，简单的GitHub文件浏览器
+学习vue.js的入门demo，简单的GitHub文件浏览器。
+
+See [DEMO](http://xiaoluoboding.github.io/vue-demo-collection/github-file-explorer/)
 
 ## vux-demo
 
