@@ -14,15 +14,25 @@ cd vue-demo-collection
 npm install
 ```
 
-## github-file-explorer
+## Index
 
-学习vue.js的入门demo，简单的GitHub文件浏览器。
+1. github-file-explorer，简单的Github文件浏览器。
+1. vux-demo，vux用于快速创建移动端UI很棒。
 
-See [DEMO](http://xiaoluoboding.github.io/vue-demo-collection/github-file-explorer/)
+### github-file-explorer
 
-## vux-demo
+[Tutorial](http://xlbd.me/vue-demo-github-file-explorer/)
+[Demo](http://xiaoluoboding.github.io/vue-demo-collection/github-file-explorer/) / [Source](https://github.com/xiaoluoboding/vue-demo-collection/tree/master/github-file-explorer)
 
-学习vux时创建的demo，vux用于快速创建移动端UI很棒。
+学习内容：
+
+* `使用简单vue指令`
+* `使用vue插件vue-resource`
+* `使用vue调试工具Vue Devtools`
+
+### vux-demo
+
+TBD...
 
 #License
 
