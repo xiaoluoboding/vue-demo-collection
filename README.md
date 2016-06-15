@@ -21,7 +21,7 @@ npm install
 
 ### github-file-explorer
 
-[Tutorial](http://xlbd.me/vue-demo-github-file-explorer/)
+[Tutorial](http://xlbd.me/vue-demo-github-file-explorer/) /
 [Demo](http://xiaoluoboding.github.io/vue-demo-collection/github-file-explorer/) / [Source](https://github.com/xiaoluoboding/vue-demo-collection/tree/master/github-file-explorer)
 
 学习内容：
