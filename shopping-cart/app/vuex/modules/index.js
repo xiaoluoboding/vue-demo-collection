@@ -26,7 +26,7 @@ const state = {
       '128GB': 6888 
     }
   },
-  cart: {}
+  cart: []
 }
 
 // mutations
