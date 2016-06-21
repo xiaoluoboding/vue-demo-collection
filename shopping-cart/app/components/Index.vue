@@ -29,7 +29,7 @@
       'totalPrice': function() {
         let totalPrice = 0
         for (let i in this.cart) {
-          totalPrice += this.cart[i].price 
+          totalPrice += this.cart[i].price
         }
         return totalPrice
       }
@@ -101,7 +101,7 @@
           <div class="panel-body cart-detail">
             <ul>
               <li v-for="item in cart">
-                <a href="#" @click="removeItem()"><span class="pomegranage glyphicon glyphicon-remove-circle"></span></a>
+                <a href="#" @click="removeItem(item)"><span class="pomegranage glyphicon glyphicon-remove-circle"></span></a>
                 <span>iPhone6s</span>
                 <span class="label label-danger" v-text="item.type"></span>
                 <span class="badge" v-text="item.count"></span>
@@ -113,7 +113,7 @@
             <button class="btn btn-danger btn-block">结算 <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
   </div><!-- ./container -->
 </template>

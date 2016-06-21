@@ -6,7 +6,7 @@ import {
   REMOVE_ITEM
 } from '../mutation-types'
 
-// initial state
+// 该模块的初始状态
 const state = {
   iPhone6S: {
     name: 'Apple/苹果 iPhone 6S',
@@ -23,13 +23,13 @@ const state = {
     storage: {
       '16GB': 5288,
       '64GB': 6088,
-      '128GB': 6888 
+      '128GB': 6888
     }
   },
   cart: []
 }
 
-// mutations
+// 相关的 mutations
 const mutations = {
   [CHANGE_STYLE] (state, styleName, styleUrl) {
     state.iPhone6S.activeStyle = styleName
@@ -44,17 +44,14 @@ const mutations = {
     const activeStyle = state.iPhone6S.activeStyle === undefined ? '银色' : state.iPhone6S.activeStyle
     const type = activeStyle + '，' +  state.iPhone6S.activeStorage
     const cartInfo = {
-      type: type, 
+      type: type,
       count: 1,
       price: state.iPhone6S.price
     }
     state.cart.push(cartInfo)
   },
   [REMOVE_ITEM] (state, cartInfo) {
-    const index = state.cart.indexOf(cartInfo)
-    if (index !== -1) {
-      state.cart.splice(index, 1)
-    }
+    state.cart.$remove(cartInfo)
   }
 }
 
