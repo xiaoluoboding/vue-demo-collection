@@ -17,6 +17,7 @@ npm install
 ## Index
 
 1. github-file-explorer，简单的Github文件浏览器。
+1. shpping-cart，模仿购物车案例的Demo。
 1. vux-demo，vux用于快速创建移动端UI很棒。
 
 ## github-file-explorer
@@ -29,6 +30,16 @@ npm install
 * `使用简单vue指令`
 * `使用vue插件vue-resource`
 * `使用vue调试工具Vue Devtools`
+
+## shopping-cart
+
+[Source](https://github.com/xiaoluoboding/vue-demo-collection/tree/master/shopping-cart)
+
+学习内容：
+
+* `使用vue-router`
+* `使用vuex进行状态管理`
+* `使用Vue DevTools调试vuex`
 
 ## vux-demo
 
