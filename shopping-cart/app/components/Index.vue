@@ -1,12 +1,11 @@
 <script>
-  import { changePrice, changeStyle, addItem, removeItem } from '../vuex/actions'
+  import { changePrice, changeStyle, addItem } from '../vuex/actions'
 
   export default {
     name: 'Index',
 
     data() {
       return {
-        isShow: false,
         activeStyle: '',
         type: ''
       }
@@ -14,32 +13,12 @@
 
     vuex: {
       getters: {
-        iPhone6S: ({ index }) => index.iPhone6S,
-        cart: ({ index }) => index.cart
+        iPhone6S: ({ index }) => index.iPhone6S
       },
       actions: {
         changePrice,
         changeStyle,
-        addItem,
-        removeItem
-      }
-    },
-
-    computed: {
-      'totalPrice': function() {
-        let totalPrice = 0
-        for (let i in this.cart) {
-          totalPrice += this.cart[i].price
-        }
-        return totalPrice
-      }
-    },
-
-    watch: {
-      'cart': function(val) {
-        if (val.length > 0) {
-          this.isShow = true
-        }
+        addItem
       }
     }
   }
@@ -47,7 +26,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="product col-md-8 col-sm-8">
+      <div class="product col-md-offset-2 col-sm-offset-2 col-md-8 col-sm-8">
         <div class="row">
           <div class="gallery col-md-6 col-sm-6">
             <img :src="iPhone6S.activeStyleUrl" class="img-responsive" alt="">
@@ -92,28 +71,6 @@
           </div>
         </div>
       </div> <!-- ./product -->
-      <div class="cart col-md-4 col-sm-4" v-if="isShow">
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
-            <span class="pull-right"><strong>总计：{{ totalPrice }}</strong></span></span>
-          </div>
-          <div class="panel-body cart-detail">
-            <ul>
-              <li v-for="item in cart">
-                <a href="#" @click="removeItem(item)"><span class="pomegranage glyphicon glyphicon-remove-circle"></span></a>
-                <span>iPhone6s</span>
-                <span class="label label-danger" v-text="item.type"></span>
-                <span class="badge" v-text="item.count"></span>
-                <span class="cart-price pomegranage pull-right"><strong>{{ item.price }}</strong></span>
-              </li>
-            </ul>
-          </div>
-          <div class="panel-footer">
-            <button class="btn btn-danger btn-block">结算 <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
-          </div>
-        </div>
-      </div>
     </div>
   </div><!-- ./container -->
 </template>
@@ -145,12 +102,5 @@
 }
 .option ul .active {
   border: 2px solid #c0392b;
-}
-.cart-detail ul {
-  padding: 0;
-}
-.cart-detail ul > li {
-  list-style: none;
-  padding: 4px 8px;
 }
 </style>

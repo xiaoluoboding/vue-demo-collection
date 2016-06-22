@@ -6,6 +6,9 @@ export default function(router) {
     },
     '/index': {
       component: require("./components/Index.vue")
+    },
+    '/cart': {
+      component: require("./components/Cart.vue")
     }
   })
 }
