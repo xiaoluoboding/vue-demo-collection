@@ -17,7 +17,7 @@ npm install
 ## Index
 
 1. github-file-explorer，简单的Github文件浏览器。
-1. shpping-cart，模仿购物车场景。
+1. shopping-cart，模仿购物车场景。
 1. vux-demo，vux用于快速创建移动端UI很棒。
 
 ## github-file-explorer
