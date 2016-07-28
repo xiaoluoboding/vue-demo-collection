@@ -1,0 +1,12 @@
+{
+  "name": "development",
+  "description": "Add here any environment specific stuff you like.",
+  "db": {
+    "uri": "mongodb://localhost:27017/vuex-mongoose",
+    "options": {
+      "server": {
+        "poolSize": 10
+      }
+    }
+  }
+}
