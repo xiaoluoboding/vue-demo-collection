@@ -18,6 +18,7 @@ npm install
 
 1. github-file-explorer，简单的Github文件浏览器。
 1. shopping-cart，模仿购物车场景。
+1. vuex-mongoose，Vuex结合Mongoose最佳实践代码样本。
 1. vux-demo，vux用于快速创建移动端UI很棒。
 
 ## github-file-explorer
@@ -43,6 +44,18 @@ npm install
 * `如何配置vuex`
 * `使用vuex进行状态管理`
 * `使用Vue DevTools调试vuex`
+
+## vuex-mongoose
+
+[Tutorial](http://xlbd.me/vuex-with-mongoose-best-practices/) /
+[Source](https://github.com/xiaoluoboding/vue-demo-collection/tree/master/vuex-mongoose)
+
+学习内容：
+
+* `通过Mongoose连接MongoDB数据库`
+* `导出一个Model模块为App所用`
+* `使用Vuex结合Mongoose全局化Model`
+* `使用Model来进行数据库操作`
 
 ## vux-demo
 

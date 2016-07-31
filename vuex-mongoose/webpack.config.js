@@ -3,6 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: path.join(__dirname, 'src/main.js'),
+  target: 'node',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -11,13 +12,14 @@ module.exports = {
   node: {
     fs: "empty",
     net: "empty",
-    tls: "empty"
+    tls: "empty",
+    __filename: false,
+    __dirname: true
   },
   resolve: {
     extensions: ["", ".json", ".node", ".js"],
     modulesDirectories: ['node_modules']
   },
-  target: "node",
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
   },
@@ -68,7 +70,8 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
+      },
+      'global.GENTLY': false
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
