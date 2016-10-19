@@ -4,21 +4,10 @@
   import FlexboxItem from 'vux/dist/components/flexbox-item'
   import Group from 'vux/dist/components/group'
   import Masker from 'vux/dist/components/masker'
-  import Tabbar from 'vux/dist/components/tabbar'
-  import TabbarItem from 'vux/dist/components/tabbar-item'
   import XHeader from 'vux/dist/components/x-header'
+  import HomeTabbar from './HomeTabbar.vue'
   export default {
     name: 'Home',
-
-    data() {
-      return {
-        iconList: {
-          star: 'http://o85fi69p7.bkt.clouddn.com/iconfont_tabbar_star.png',
-          evaluate: 'http://o85fi69p7.bkt.clouddn.com/iconfont_tabbar_evaluate.png',
-          user: 'http://o85fi69p7.bkt.clouddn.com/iconfont_tabbar_user.png'
-        }
-      }
-    },
 
     components: {
       Box,
@@ -26,9 +15,8 @@
       FlexboxItem,
       Group,
       Masker,
-      Tabbar,
-      TabbarItem,
-      XHeader
+      XHeader,
+      HomeTabbar
     }
   }
 </script>
@@ -41,23 +29,23 @@
       <masker style="border-radius: 2px;" color="e74c3c" :opacity="0.8" v-link="{ path: '/improve' }">
         <div class="m-img"></div>
         <div slot="content" class="m-title">
-          完善资料
+          五险计算
         </div>
       </masker>
     </div>
-    <div style="margin: 10px;overflow: hidden;">
+    <div style="margin: 10px;overflow: hidden;" v-link="{ path: '/provident' }">
       <masker style="border-radius: 2px;" color="3498db" :opacity="0.8">
         <div class="m-img"></div>
         <div slot="content" class="m-title">
-          我要撰写
+          公积金计算
         </div>
       </masker>
     </div>
-    <div style="margin: 10px;overflow: hidden;" v-link="{ path: '/hisevaluate' }">
+    <div style="margin: 10px;overflow: hidden;" v-link="{ path: '/' }">
       <masker style="border-radius: 2px;" color="2ecc71" :opacity="0.8">
         <div class="m-img"></div>
         <div slot="content" class="m-title">
-          我要分享
+          房贷计算
         </div>
       </masker>
     </div>
@@ -70,22 +58,7 @@
       </masker>
     </div>
   </section>
-  <section class="home-tabbar">
-    <tabbar>
-      <tabbar-item show-dot>
-        <img slot="icon" :src="iconList.star">
-        <span slot="label">推荐</span>
-      </tabbar-item>
-      <tabbar-item selected v-link="{ path: '/home', replace: true }">
-        <img slot="icon" :src="iconList.evaluate">
-        <span slot="label">文章</span>
-      </tabbar-item>
-      <tabbar-item v-link="{ path: '/user', replace: true }">
-        <img slot="icon" :src="iconList.user">
-        <span slot="label">我的</span>
-      </tabbar-item>
-    </tabbar>
-  </section>
+  <home-tabbar></home-tabbar>
 </template>
 <style>
 .m-img {

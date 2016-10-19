@@ -8,6 +8,11 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'build.js'
   },
+  resolve: {
+    alias: {
+      'vux-components': 'vux/dist/components/'
+    }
+  },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
   },

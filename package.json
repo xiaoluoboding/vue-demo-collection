@@ -6,7 +6,7 @@
     "github-file-explorer": "webpack-dev-server --config github-file-explorer/webpack.config.js --content-base github-file-explorer --inline --hot --port 8090",
     "shopping-cart": "webpack-dev-server --config shopping-cart/webpack.config.js --content-base shopping-cart --inline --hot --port 8090",
     "vuex-mongoose": "webpack-dev-server --config vuex-mongoose/webpack.config.js --content-base vuex-mongoose --inline --hot --port 8090",
-    "vux-demo": "webpack-dev-server --config vux-demo/webpack.config.js --content-base vux-demo --inline --hot --port 8090",
+    "financial-tools": "webpack-dev-server --config financial-tools/webpack.config.js --content-base financial-tools --inline --hot --port 8090",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {

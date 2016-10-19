@@ -57,9 +57,11 @@ npm install
 * `使用Vuex结合Mongoose全局化Model`
 * `使用Model来进行数据库操作`
 
-## vux-demo
+## financial-tools
 
-TBD...
+A demo of vux.
+
+* `使用vux来构建简单的移动应用页面`
 
 #License
 

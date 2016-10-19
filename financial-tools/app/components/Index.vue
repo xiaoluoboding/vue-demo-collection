@@ -48,7 +48,7 @@
     left: 0;
 
     /* 加载背景图 */
-    background-image: url(http://o85fi69p7.bkt.clouddn.com/index_bg.png);
+    background-image: url(http://o8yu724qs.bkt.clouddn.com/index_bg.png);
 
     /* 背景图垂直、水平均居中 */
     background-position: center center;
