@@ -12,14 +12,15 @@
 			return {
 				beforeSalary: '',
 				socialInsurance: '',
-				beginSalary: '3500'
+				beginSalary: '3500.00',
+				isShowClear: false
 			}
 		},
 
 		computed: {
 			taxableIncome () {
 				if(parseInt(this.beforeSalary) > 3500) {
-					return this.beforeSalary - this.socialInsurance - this.beginSalary + ''
+					return parseFloat(this.beforeSalary - this.socialInsurance - this.beginSalary).toFixed(2)
 				}
 			},
 			taxRate () {
@@ -57,15 +58,19 @@
 				}
 			},
 			taxes () {
-				if(this.taxableIncome > 0) {
-					return this.taxableIncome * this.taxRate - this.deduction + ''
+				if(this.taxableIncome > 0.00) {
+					return parseFloat(this.taxableIncome * this.taxRate - this.deduction).toFixed(2)
 				}
 			},
 			salary () {
-				if(this.taxableIncome > 0) {
-					return this.beforeSalary - this.socialInsurance - this.taxes + ''
+				if(this.taxableIncome > 0.00) {
+					return parseFloat(this.beforeSalary - this.socialInsurance - this.taxes).toFixed(2)
 				}
 			}
+		},
+
+		method: {
+
 		},
 
 	  components: {
@@ -81,20 +86,35 @@
 </script>
 <template>
   <div>
-  	<x-header :right-options="{showMore: true}">公积金计算器</x-header>
+  	<x-header :right-options="{showMore: true}">公积金计算</x-header>
   	<group title="输入要素">
-		  <x-input type="text" :value.sync="beforeSalary" title="税前工资：" keyboard=number placeholder="0.00" v-ref:input></x-input>
-		  <x-input type="text" :value.sync="socialInsurance" title="各项社会保险：" keyboard=number placeholder="0.00" v-ref:input></x-input>
-		  <x-input :value.sync="beginSalary" title="起征点：" readonly></x-input>
+		  <x-input type="text" :value.sync="beforeSalary"
+		  	title="税前工资："
+		  	keyboard=number
+		  	placeholder="0.00"
+		  	v-ref:input
+		  	text-align="right"></x-input>
+		  <x-input type="text" :value.sync="socialInsurance"
+		  	title="各项社会保险："
+		  	keyboard=number
+		  	placeholder="0.00"
+		  	v-ref:input
+		  	text-align="right"></x-input>
+		  <x-input :value.sync="beginSalary" title="起征点：" readonly :show-clear=false text-align="right"></x-input>
 		  <!-- <cell title="get valid value" :value="'$valid value:' + $refs.input.valid"></cell> -->
 		</group>
 		
 		<group title="计算结果">
-		  <x-input :value.sync="taxableIncome" title="应纳税所得额：" readonly placeholder="0.00"></x-input>
-		  <x-input :value.sync="taxRate" title="适用税率：" readonly placeholder="0.00"></x-input>
-		  <x-input :value.sync="deduction" title="速算扣除数：" readonly></x-input>
-		  <x-input :value.sync="taxes" title="应缴税款：" readonly placeholder="0.00"></x-input>
-		  <x-input :value.sync="salary" title="应发工资：" readonly placeholder="0.00"></x-input>
+		  <cell title="应纳税所得额：" :value="taxableIncome"></cell>
+		  <cell title="适用税率：" :value="taxRate"></cell>
+		  <cell title="速算扣除数：" :value="deduction"></cell>
+		  <cell title="应缴税款：" :value="taxes"></cell>
+		  <cell title="应发工资：">
+        <div slot="value">
+          <span style="color: green" v-text="salary"></span>
+        </div>
+      </cell>
+		  <!--  -->
 		</group>
 	  <home-tabbar></home-tabbar>
 	</div>

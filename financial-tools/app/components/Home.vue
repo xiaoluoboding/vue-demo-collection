@@ -26,7 +26,7 @@
   </section>
   <section class="home-flexbox">
     <div style="margin: 10px;overflow: hidden;">
-      <masker style="border-radius: 2px;" color="e74c3c" :opacity="0.8" v-link="{ path: '/improve' }">
+      <masker style="border-radius: 2px;" color="e74c3c" :opacity="0.8" v-link="{ path: '/insurance' }">
         <div class="m-img"></div>
         <div slot="content" class="m-title">
           五险计算
