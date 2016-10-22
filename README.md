@@ -19,7 +19,7 @@ npm install
 1. github-file-explorer，简单的Github文件浏览器。
 1. shopping-cart，模仿购物车场景。
 1. vuex-mongoose，Vuex结合Mongoose最佳实践代码样本。
-1. vux-demo，vux用于快速创建移动端UI很棒。
+1. financial-tools，使用Vux构建的理财小工具。
 
 ## github-file-explorer
 
@@ -59,9 +59,12 @@ npm install
 
 ## financial-tools
 
-A demo of vux.
+[Source](https://github.com/xiaoluoboding/vue-demo-collection/tree/master/financial-tools)
+
+学习内容：
 
 * `使用vux来构建简单的移动应用页面`
+* `使用vue-router`进行简单的导航`
 
 #License
 
