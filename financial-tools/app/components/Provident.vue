@@ -8,6 +8,7 @@
 	import HomeTabbar from './HomeTabbar.vue'
 	export default {
 		name: 'Provident',
+
 		data () {
 			return {
 				beforeSalary: '',
@@ -69,7 +70,7 @@
 			}
 		},
 
-		method: {
+		methods: {
 
 		},
 
@@ -103,7 +104,7 @@
 		  <x-input :value.sync="beginSalary" title="起征点：" readonly :show-clear=false text-align="right"></x-input>
 		  <!-- <cell title="get valid value" :value="'$valid value:' + $refs.input.valid"></cell> -->
 		</group>
-		
+
 		<group title="计算结果">
 		  <cell title="应纳税所得额：" :value="taxableIncome"></cell>
 		  <cell title="适用税率：" :value="taxRate"></cell>
@@ -120,5 +121,5 @@
 	</div>
 </template>
 <style>
-	
+
 </style>

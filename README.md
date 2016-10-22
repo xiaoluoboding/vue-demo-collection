@@ -64,7 +64,7 @@ npm install
 学习内容：
 
 * `使用vux来构建简单的移动应用页面`
-* `使用vue-router`进行简单的导航`
+* `使用vue-router进行简单的导航`
 
 #License
 

@@ -9,6 +9,7 @@
 
 	export default {
 		name: 'Insurance',
+		
 		data () {
 			return {
 				defaultAmt: '0.00',
@@ -30,9 +31,9 @@
 				return this.salary > 0 ? parseFloat(this.salary * 0.12).toFixed(2) : this.defaultAmt
 			},
 			heji () {
-				return (parseFloat(this.yanglao) + 
-								parseFloat(this.yiliao) + 
-								parseFloat(this.shiye) + 
+				return (parseFloat(this.yanglao) +
+								parseFloat(this.yiliao) +
+								parseFloat(this.shiye) +
 								parseFloat(this.gongjijin)).toFixed(2)
 			}
 		},
@@ -52,14 +53,14 @@
   <div>
   	<x-header :right-options="{showMore: true}">五险计算</x-header>
   	<group title="输入要素">
-		  <x-input type="text" :value.sync="salary" 
+		  <x-input type="text" :value.sync="salary"
 		  	title="税前工资："
 		  	keyboard=number
 		  	placeholder="0.00"
 		  	v-ref:input
 		  	text-align="right"></x-input>
 		</group>
-		
+
 		<group title="个人缴存部分">
 		  <cell title="养老" :value="yanglao"></cell>
 		  <cell title="医疗" :value="yiliao"></cell>
