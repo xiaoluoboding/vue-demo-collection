@@ -1,30 +1,26 @@
 <script>
-  import {
-    removeItem
-  } from '../vuex/actions'
+  import { mapState, mapActions } from 'vuex'
 
   export default {
     name: 'Cart',
 
-    vuex: {
-      getters: {
-        cart: ({
-          index
-        }) => index.cart
-      },
-      actions: {
-        removeItem
-      }
-    },
-
     computed: {
-      'totalPrice': function() {
+      ...mapState({
+        cart: state => state.cart.cart
+      }),
+      totalPrice() {
         let totalPrice = 0
         for (let i in this.cart) {
           totalPrice += this.cart[i].price
         }
         return totalPrice
       }
+    },
+
+    methods: {
+      ...mapActions([
+        'removeItem',
+      ]),
     }
   }
 </script>

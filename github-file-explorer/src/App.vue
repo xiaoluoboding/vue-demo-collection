@@ -10,6 +10,6 @@
 
 <template>
   <div id="app">
-    <github></github>
+    <github />
   </div>
 </template>
