@@ -1,25 +1,21 @@
 <script>
-  import { changePrice, changeStyle, addItem } from '../vuex/actions'
+  import { mapState, mapActions } from 'vuex'
 
   export default {
     name: 'Index',
 
-    data() {
-      return {
-        activeStyle: '',
-        type: ''
-      }
+    computed: {
+      ...mapState({
+        iPhone6S: state => state.cart.iPhone6S
+      }),
     },
 
-    vuex: {
-      getters: {
-        iPhone6S: ({ index }) => index.iPhone6S
-      },
-      actions: {
-        changePrice,
-        changeStyle,
-        addItem
-      }
+    methods: {
+      ...mapActions([
+        'changePrice',
+        'changeStyle',
+        'addItem',
+      ]),
     }
   }
 </script>
@@ -47,9 +43,11 @@
                 <dt>外观：</dt>
                 <dd>
                   <ul>
-                    <li v-for="styleUrl in iPhone6S.style"
-                        @click="changeStyle($key, styleUrl)"
-                        :class="{active: iPhone6S.activeStyleUrl == styleUrl}"><span v-text="$key"></span></li>
+                    <li v-for="(value, key) in iPhone6S.style"
+                        @click="changeStyle(key)"
+                        :class="{active: iPhone6S.activeStyleUrl == value}">
+                        <span v-text="key"></span>
+                    </li>
                   </ul>
                 </dd>
               </dl>
@@ -57,15 +55,15 @@
                 <dt>存储容量:</dt>
                 <dd>
                   <ul>
-                    <li v-for="price in iPhone6S.storage"
-                        @click="changePrice($key, price)"
-                        :class="{active: iPhone6S.price == price}"><span v-text="$key"></span></li>
+                    <li v-for="(value, key) in iPhone6S.storage"
+                        @click="changePrice(key)"
+                        :class="{active: iPhone6S.price == value}"><span v-text="key"></span></li>
                   </ul>
                 </dd>
               </dl>
             </div>
             <hr>
-            <button class="btn btn-danger btn-block" @click="addItem()" :disabled="iPhone6S.isSelected">
+            <button class="btn btn-danger btn-block" @click="addItem" :disabled="iPhone6S.isSelected">
               <span class="glyphicon glyphicon-shopping-cart"></span> 加入购物车
             </button>
           </div>

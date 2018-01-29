@@ -3,7 +3,7 @@
 
   export default {
     name: 'Github',
-    data: function() {
+    data () {
       return {
         fullRepoName: '',
         username: '',
